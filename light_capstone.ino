@@ -47,7 +47,7 @@ void loop() {
     // Check if the physical switch state has changed
     if (currentSwitchState != lastSwitchState[i]) {
       if (i == 1) {  
-        // 🔄 Invert the logic for GPIO 19
+        //  Invert the logic for GPIO 19
         relayStates[i] = (currentSwitchState == HIGH) ? LOW : HIGH; 
       } else {
         relayStates[i] = (currentSwitchState == LOW) ? LOW : HIGH; 
@@ -67,7 +67,7 @@ void loop() {
     String request = client.readStringUntil('\r');  // Read the HTTP request
     client.flush();
 
-    // ✅ Fix: Allow web commands to control relays at all times
+    //  Fix: Allow web commands to control relays at all times
     if (request.indexOf("/ON1") != -1) {
       relayStates[0] = LOW;
       Serial.println("Web: Relay 1 ON");
