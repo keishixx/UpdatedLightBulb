@@ -1,6 +1,6 @@
 #include <WiFi.h>
 
-// 🔹 Replace with your WiFi credentials:
+//  Replace with your WiFi credentials:
 const char *ssid = "iPhone";        
 const char *password = "shimalakas";  
 
